@@ -9,6 +9,6 @@ app.get('/products/:id', (req, res, next) => {
 
 });
 
-app.listen(50, () => {
-    console.log('listening at port: 50');
+app.listen(3000, () => {
+    console.log('listening at port: 3000');
 });
