@@ -1,9 +1,14 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const cors = require('cors');
+const app = express();
 
-app.get('/', function(req, res){
-    res.send("HELLO");
+app.use(cors());
+
+app.get('/products/:id', (req, res, next) => {
+    res.json({msg: 'This is cors-enabled for all origins'})
 
 });
 
-app.listen(3000);
+app.listen(50, () => {
+    console.log('listening at port: 50');
+});
